@@ -6,10 +6,15 @@ jobs:
     steps:
      # Step 1
 
-      - name: List BEFORE After Checkout
+      - name: List BEFORE Checkout & echo Main vars
         run: | 
           pwd
           ls -al
+          echo $GITHUB_SHA 
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          echo "Done."
 
       - name: Checkout Code Task
         uses: actions/checkout@v2
