@@ -1,0 +1,17 @@
+# Name of the workflow 
+name: Shell Commnds
+
+# Events
+on: [push]
+
+# Jobs
+jobs:
+  run-shell-commnd:
+    runs-on: ubuntu-latest        # run on ubuntu box
+    steps:                        # steps
+      - name: echo a string        
+        run: echo "Hola Vivian"   # single line step
+      - name: Multi Line Step 
+        run: |                    # multi line step
+          node -v
+          npm -v
