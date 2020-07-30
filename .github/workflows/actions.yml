@@ -5,10 +5,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      # Step 1
-      - name:
+
+      - name: List BEFORE After Checkout
         run: | 
           pwd
           ls -al
+
+      - name: Checkout Code Task
+        uses: actions/checkout@v2
+
+      - name: List Files AFTER Checkout
+        run: | 
+          pwd
+          ls -al
+
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
