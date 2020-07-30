@@ -30,6 +30,7 @@ jobs:
 
   windows-job:
     runs-on: windows-latest
+    needs: ["run-shell-commnd"]
     steps:
       - name: Powershell Task
         run: Get-Location
