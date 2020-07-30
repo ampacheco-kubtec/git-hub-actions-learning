@@ -6,6 +6,8 @@ on: [push]
 
 # Jobs
 jobs:
+
+
   run-shell-commnd:
     runs-on: ubuntu-latest        # run on ubuntu box
     steps:                        # steps
@@ -24,3 +26,19 @@ jobs:
         run: |                    # multi line step
           import platform
           print(platform.processor())
+
+
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: Powershell Task
+        run: Get-Location
+      - name: Bash Task
+        shell: bash
+        run: |
+          pwd
+
+# End 
+
+
+
