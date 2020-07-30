@@ -12,4 +12,4 @@ jobs:
           who-to-greet: 'Vivian'
       # Step 2
       - name: Log greeting time
-        run: echo $ {{ steps.greet.outputs.time }}
+        run: echo "${{ steps.greet.outputs.time }}"
