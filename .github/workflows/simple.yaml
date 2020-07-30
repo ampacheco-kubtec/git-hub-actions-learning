@@ -9,9 +9,18 @@ jobs:
   run-shell-commnd:
     runs-on: ubuntu-latest        # run on ubuntu box
     steps:                        # steps
+
       - name: echo a string        
-        run: eccho "Hola Vivian"   # single line step
+        run: echo "Hola Vivian"   # single line step
+
       - name: Multi Line Step 
         run: |                    # multi line step
           node -v
           npm -v
+
+      # task explicit with python shell
+      - name: Python Scripts 
+        shell: python
+        run: |                    # multi line step
+          import platform
+          print(platform.processor())
