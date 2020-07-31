@@ -15,6 +15,9 @@ jobs:
     steps:
      # Step 1
 
+      - name: Client Payload
+        run: echo ${{ github.event.client_payload.env }}
+
       - name: List BEFORE Checkout & echo Main vars
         run: | 
           pwd
