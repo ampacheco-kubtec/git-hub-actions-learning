@@ -1,0 +1,15 @@
+# workflow name
+name: Tokens
+# trigger
+on: ['push']
+# jobs
+jobs:
+  # job name 1..n
+  test-token-job:
+    # runner env
+    runs-on: ubuntu-latest
+    # jobs steps
+    steps:
+     # Command Step
+      - name: Print Token
+        run: echo "${{ secrets.GITHUB_TOKEN }}"
