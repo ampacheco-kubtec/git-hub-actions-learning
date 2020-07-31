@@ -1,5 +1,11 @@
 name: Action workflow
-on: ["push"]
+on:
+  schedule:
+    - cron: "* * * * *"
+
+  pull_request:
+    types: ["closed", "assigned", "opnened", "reopened"]
+
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
