@@ -15,6 +15,10 @@ jobs:
     steps:
      # Step 1
 
+      - name: Github Tokem
+        run: |
+          echo  "GITHUB_TOKR: ${{ secrets.GITHUB_TOKEN }}"
+
       - name: Client Payload
         run: echo ${{ github.event.client_payload.env }}
 
