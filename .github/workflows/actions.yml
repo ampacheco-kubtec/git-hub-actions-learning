@@ -17,7 +17,7 @@ jobs:
 
       - name: Github Tokem
         run: |
-          echo  "GITHUB_TOKR: ${{ secrets.GITHUB_TOKEN }}"
+          echo  "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
 
       - name: Client Payload
         run: echo ${{ github.event.client_payload.env }}
